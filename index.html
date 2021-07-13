@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tree Trivia</title>
+    <link rel="stylesheet" href="tree.css">
+</head>
+
+<body>
+    <main>
+        <h1>Tree Trivia </h1>
+        <form action="confirm.html" method="get">
+            <div>
+                <label for="question1">Question 1:</label>
+                <input type="text" name="question1Ans" id="question1Ans">
+                <span>*</span>
+            </div>
+            <div>
+                <label for="question2">Question 2:</label>
+                <input type="text" name="question2Ans" id="question2Ans">
+                <span>*</span>
+            </div>
+            <div>
+                <label for="question3">Queestion 3:</label>
+                <input name="question3Ans" id="question3Ans">
+                    <option value="">Select the answer</option>
+                    <option>USA</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                </select>
+                <span>*</span>
+            </div>
+            <div>
+                <label>Contact me by:</label>
+                <input type="radio" name="contact" id="text"
+                    value="text" checked>Text
+                <input type="radio" name="contact" id="email"
+                    value="email">Email
+                <input type="radio" name="contact" id="none"
+                    value="none">Don't contact me
+            </div>
+            <div>
+                <label>Terms of Service:</label>
+                <input type="checkbox" name="terms" id="terms"
+                    value="yes">I accept
+                <span>*</span>
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="button" id="register" value="Register">
+                <input type="button" id="reset_form" value="Reset">
+            </div>
+
+        </form>
+    </main>
+    <script src="register.js"></script>
+</body>
+</html>
