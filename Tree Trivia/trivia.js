@@ -231,5 +231,9 @@
     submitButton.addEventListener("click", showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
+
+    const form = $("form");
+    const enterButton = document.getElementById("enter");
+    enterButton.addEventListener("click", $("form").submit);
     
 })();
