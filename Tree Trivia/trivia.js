@@ -71,7 +71,8 @@ function showSlide(n) {
         nextButton.style.display = 'inline-block';
         submitButton.style.display = 'none';
     }
-    }
+}
+
 function showNextSlide() {
     showSlide(currentSlide + 1);
     }

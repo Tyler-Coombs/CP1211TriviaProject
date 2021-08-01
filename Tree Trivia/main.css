@@ -29,20 +29,6 @@ input, select {
     margin-right: 0.5em;
 }
 select { width: 13em; }
-#submit {
-    font-family: sans-serif;
-	font-size: 20px;
-	background-color: #279;
-	color: #fff;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
-}
-#submit:hover{
-	background-color: #38a;
-}
 
 .flex-container {
     display: flex;
@@ -57,6 +43,19 @@ select { width: 13em; }
     justify-content: center;
     align-items: center;
 }
+.button-container {
+    display: flex;
+    background-color: rgb(89, 125, 103);
+    flex-direction: column;
+    width: 900px;
+    height: 100%;
+    margin: auto;
+    margin-top: 100px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
 .flex-container2 {
     display: flex;
     background-color: rgb(89, 125, 103);
