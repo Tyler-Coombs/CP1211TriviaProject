@@ -2,10 +2,15 @@
 
 const $ = selector => document.querySelector(selector); 
 
+//let randomQuestions = myQuestions.sort(() => Math.random() - .5)
+//randomQuestions = randomQuestions.slice(0,10)
+
 function buildTrivia(){
     const output = [];
+    let randomQuestions = myQuestions.sort(() => Math.random() - .5)
+    randomQuestions = randomQuestions.slice(0,10)
 
-    myQuestions.forEach(
+    randomQuestions.forEach(
         (currentQuestion, questionNumber) => {
             const answers = [];
             let letter;
@@ -50,7 +55,7 @@ function showResults(){
             answerContainers[questionNumber].style.color = "red";
         }
     });
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = `${numCorrect} out of ${10}`;
 }
 
 function showSlide(n) {
@@ -93,7 +98,8 @@ const myQuestions = [
             c: "Douglas Fir",
             d: "Coastal Redwood"
         },
-        correctAnswer: "d"
+        correctAnswer: "d",
+        pictures: "pictures/redwoodTrunk.jpg"
     },
     {
         question: "Which plant family does the pear tree belong to?",
@@ -103,7 +109,8 @@ const myQuestions = [
             c: "Lily",
             d: "Poppy"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        pictures: "pictures/pearTree.jpg"
     },
     {
         question: "What does the latin word 'arboretum mean?",
@@ -113,7 +120,8 @@ const myQuestions = [
             c: "Group of trees near water",
             d: "Place with trees"
         },
-        correctAnswer: "d"
+        correctAnswer: "d",
+        pictures: "pictures/arboretum.jpg"
     },
     {
         question: "Which of the following trees do not produce nuts?",
@@ -123,7 +131,8 @@ const myQuestions = [
             c: "Juniper",
             d: "Almond"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        pictures: "pictures/almonds.jpg"
     },
     {
         question: "Which tree indigenous to Newfoundland and Labrador is stunted and shaped by our strong winds?",
@@ -143,7 +152,8 @@ const myQuestions = [
             c: "Africa",
             d: "South America"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        pictures: "pictures/arabica.jpg"
     },
     {
         question: "What is the common name of the tree species Fraxinus excelsior?",
@@ -153,7 +163,8 @@ const myQuestions = [
             c: "Rowan",
             d: "Ash"
         },
-        correctAnswer: "d"
+        correctAnswer: "d",
+        pictures: "pictures/FraxinusExcelsior.jpg"
     },
     {
         question: "What is a bonsai tree?",
@@ -173,7 +184,8 @@ const myQuestions = [
             c: "Central Malasia to South West Pacific",
             d: "North Africa"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        pictures: "pictures/coconutPalm.jpg"
     },
     {
         question: "What is the age of the oldest recorded Maidenhair Tree?",
@@ -183,7 +195,8 @@ const myQuestions = [
             c: "2000 years old",
             d: "3500 years old"
         },
-        correctAnswer: "d"
+        correctAnswer: "d",
+        pictures: "pictures/maidenHair.jpg"
     },
     {
         question: "What tree has earned the nickname 'tree of the dead'?",
@@ -203,7 +216,8 @@ const myQuestions = [
             c: "Cherry",
             d: "Orange"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        pictures: "pictures/malusDomestica.jpg"
     },
     {
         question: "What is the largest tree by volume growing at the Royal Botanical Garden in the U.K.?",
@@ -213,7 +227,8 @@ const myQuestions = [
             c: "White willow",
             d: "Scots Pine"
         },
-        correctAnswer: "a"
+        correctAnswer: "a",
+        pictures: "pictures/kewGarden.jpg"
     }
 ];
 
