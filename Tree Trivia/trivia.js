@@ -1,19 +1,20 @@
 "use strict"
 
-const $ = selector => document.querySelector(selector); 
+//const $ = selector => document.querySelector(selector); 
 
-//let randomQuestions = myQuestions.sort(() => Math.random() - .5)
-//randomQuestions = randomQuestions.slice(0,10)
+const questionPicture = document.getElementById("questionPicture");
 
-function buildTrivia(){
+function buildTrivia() {
     const output = [];
-    let randomQuestions = myQuestions.sort(() => Math.random() - .5)
-    randomQuestions = randomQuestions.slice(0,10)
+    let randomQuestions = myQuestions.sort(() => Math.random() - .5);
+    randomQuestions = randomQuestions.slice(0,10);
+    myQuestions = randomQuestions;
 
-    randomQuestions.forEach(
+    myQuestions.forEach(
         (currentQuestion, questionNumber) => {
             const answers = [];
             let letter;
+            questionPicture.src = currentQuestion.pictures;
 
             for (letter in currentQuestion.answers) {
                 answers.push(
@@ -86,10 +87,11 @@ function showPreviousSlide() {
     showSlide(currentSlide - 1);
     }
 
+const pictureContainer = document.getElementById("picture");
 const triviaContainer = document.getElementById("trivia");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
-const myQuestions = [
+let myQuestions = [
     {
         question: "What is the tallest tree in the world?",
         answers: {
@@ -142,7 +144,8 @@ const myQuestions = [
             c: "Silver Birch",
             d: "Alder"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        pictures: "pictures/tuckamore.jpg"
     },
     {
         question: "What is the native continent of the arabica coffee tree, which produces 65% of global coffee?",
@@ -174,7 +177,8 @@ const myQuestions = [
             c: "A miniature tree in a container",
             d: "A tree pruned into a spherical shape"
         },
-        correctAnswer: "c"
+        correctAnswer: "c",
+        pictures: "pictures/bonsai.jpg"
     },
     {
         question: "What is the native region of the coconut palm?",
@@ -206,7 +210,8 @@ const myQuestions = [
             c: "London plane",
             d: "Silver Birch"
         },
-        correctAnswer: "b"
+        correctAnswer: "b",
+        pictures: "pictures/yewTree.jpg"
     },
     {
         question: "What fruit does the tree Malus domestica produce?",
@@ -245,4 +250,3 @@ showSlide(currentSlide);
 submitButton.addEventListener("click", showResults);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
-console.log(showSlide)

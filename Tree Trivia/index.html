@@ -5,20 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tree Trivia</title>
         <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/9fbbc81219.js" crossorigin="anonymous" async></script>
+        <script src="trivia.js" async></script>
     </head>
     <body>
         <main class="flex-container">
-            <h1>Tree Trivia </h1>
+            <h1><i class="fab fa-pagelines"></i><i class="fas fa-tree"></i> Tree Trivia <i class="fas fa-tree"></i><i class="fas fa-leaf"></i></h1>
                 <div class="trivia-container">
                     <div id="trivia"></div>
                 </div>
+                <div class="picture-container">
+                    <img id="questionPicture" class="image" src=""></img>
+                </div>
                 <div class="button-container">
-                    <button id="previous">Previous Question</button>
-                    <button id="next">Next Question</button>
-                    <button id="submit">Submit Answers</button>
+                    <button id="previous"><i class="fab fa-pagelines"></i> Previous Question</button>
+                    <button id="next"><i class="fas fa-leaf"></i> Next Question</button>
+                    <button id="submit"><i class="fas fa-tree"></i> Submit Answers</button>
                 </div>
                 <div id="results"></div>
+                <img class="banner" src=pictures/treeBanner.png>
         </main>
-        <script src="trivia.js"></script>
     </body>
 </html>

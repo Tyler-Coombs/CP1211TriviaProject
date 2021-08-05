@@ -1,6 +1,7 @@
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image:url(tallTree.jpg);
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    background-image:url(pictures/tallTree.jpg);
     background-repeat: no-repeat;
     background-size: auto;
     margin: 0 auto;
@@ -39,7 +40,7 @@ select { width: 13em; }
     margin: auto;
     margin-top: 100px;
     border: 3px solid rgba(255, 255, 255, 0.584);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     align-items: center;
 }
@@ -55,6 +56,17 @@ select { width: 13em; }
     justify-content: center;
     align-items: center;
 }
+.picture-container {
+    display: flex;
+    background-color: rgb(89, 125, 103);
+    flex-direction: column;
+    width: 900px;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
 
 .flex-container2 {
     display: flex;
@@ -65,9 +77,14 @@ select { width: 13em; }
     margin: auto;
     margin-top: 100px;
     border: 3px solid rgba(255, 255, 255, 0.584);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
+}
+
+.banner {
+    width: 100%
 }
 
 .slide{
@@ -85,38 +102,137 @@ select { width: 13em; }
 }
 .trivia-container{
     position: relative;
-    left: 200px;
+    left: 20px;
     justify-content: center;
     align-items: center;
     height: 200px;
-    width: 100%;
-    margin-top: 40px;
+    width: 890px;
+    margin-top: 20px;
 }
 
 .question{
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 10px;
+    color:rgb(50, 19, 3)
 }
 .answers {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     text-align: left;
-    display: inline-block;
+    justify-content: left;
+    display: block;
+    color:rgb(50, 19, 3)
 }
 .answers label{
     display: block;
     margin-bottom: 10px;
+    justify-content: left;
+}
+.image {
+    width: 600px;
+    max-width: 80%;
+    height: 300px;
+    max-height: 80%;
+    margin-top: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.584);
 }
 button{
     font-family: 'Work Sans', sans-serif;
-      font-size: 22px;
-      background-color: #279;
-      color: #fff;
-      border: 0px;
-      border-radius: 3px;
-      padding: 20px;
-      cursor: pointer;
-      margin-bottom: 20px;
+    font-size: 22px;
+    background-color: rgb(130, 81, 60);
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 button:hover{
-      background-color: #38a;
+    background-color: rgb(136, 113, 94);
+}
+a.button {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: rgb(130, 81, 60);
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+a.button:hover {
+    background-color: rgb(136, 113, 94);
+}
+
+@media only screen and (max-width: 700px) {
+    .flex-container {
+        display: flex;
+        background-color: rgb(89, 125, 103);
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        margin-top: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.584);
+        font-family:'Arial Narrow', Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-container {
+        display: flex;
+        background-color: rgb(89, 125, 103);
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        margin-top: 50px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+    .picture-container {
+        display: flex;
+        background-color: rgb(89, 125, 103);
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flex-container2 {
+        display: flex;
+        background-color: rgb(89, 125, 103);
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        margin-top: 100px;
+        border: 3px solid rgba(255, 255, 255, 0.584);
+        font-family:'Arial Narrow', Arial, sans-serif;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trivia-container{
+        position: relative;
+        left: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 445px;
+        margin-top: 40px;
+    }
+
+    .image {
+        width: 300px;
+        max-width: 80%;
+        height: 150px;
+        max-height: 80%;
+        margin-top: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.584);
+    }
 }
