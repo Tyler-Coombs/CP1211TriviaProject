@@ -30,7 +30,6 @@ input, select {
     margin-right: 0.5em;
 }
 select { width: 13em; }
-
 .flex-container {
     display: flex;
     background-color: rgb(89, 125, 103);
@@ -39,6 +38,7 @@ select { width: 13em; }
     height: 100%;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     border: 3px solid rgba(255, 255, 255, 0.584);
     font-family:'Arial Narrow', Arial, sans-serif;
     justify-content: center;
@@ -49,25 +49,12 @@ select { width: 13em; }
     background-color: rgb(89, 125, 103);
     flex-direction: column;
     width: 900px;
-    height: 100%;
-    margin: auto;
-    margin-top: 100px;
+    height: 200px;
+    margin-top: 300px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     justify-content: center;
     align-items: center;
 }
-.picture-container {
-    display: flex;
-    background-color: rgb(89, 125, 103);
-    flex-direction: column;
-    width: 900px;
-    height: 100%;
-    margin: auto;
-    margin-top: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
 .flex-container2 {
     display: flex;
     background-color: rgb(89, 125, 103);
@@ -82,11 +69,10 @@ select { width: 13em; }
     justify-content: center;
     align-items: center;
 }
-
-.banner {
-    width: 100%
+#results {
+    font-size: 25px;
+    color: rgba(174, 237, 174, 0.701);
 }
-
 .slide{
     position: absolute;
     left: 0px;
@@ -102,21 +88,23 @@ select { width: 13em; }
 }
 .trivia-container{
     position: relative;
-    left: 20px;
+    left: 190px;
     justify-content: center;
     align-items: center;
     height: 200px;
     width: 890px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
-
 .question{
     font-size: 25px;
+    width: 700px;
     margin-bottom: 10px;
     color:rgb(50, 19, 3)
 }
 .answers {
     margin-bottom: 22px;
+    width: 890px;
     text-align: left;
     justify-content: left;
     display: block;
@@ -124,15 +112,16 @@ select { width: 13em; }
 }
 .answers label{
     display: block;
+    width: 600px;
     margin-bottom: 10px;
     justify-content: left;
+    text-align: left;
 }
-.image {
-    width: 600px;
-    max-width: 80%;
+.picture {
+    width: 500px;
     height: 300px;
-    max-height: 80%;
     margin-top: 20px;
+    margin-bottom: 20px;
     border: 3px solid rgba(255, 255, 255, 0.584);
 }
 button{
@@ -163,6 +152,9 @@ a.button {
 a.button:hover {
     background-color: rgb(136, 113, 94);
 }
+.banner {
+    width: 100%
+}
 
 @media only screen and (max-width: 700px) {
     .flex-container {
@@ -185,23 +177,11 @@ a.button:hover {
         width: auto;
         height: 100%;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 350px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         justify-content: center;
         align-items: center;
     }
-    .picture-container {
-        display: flex;
-        background-color: rgb(89, 125, 103);
-        flex-direction: column;
-        width: auto;
-        height: 100%;
-        margin: auto;
-        margin-top: 30px;
-        justify-content: center;
-        align-items: center;
-    }
-    
     .flex-container2 {
         display: flex;
         background-color: rgb(89, 125, 103);
@@ -216,7 +196,6 @@ a.button:hover {
         justify-content: center;
         align-items: center;
     }
-
     .trivia-container{
         position: relative;
         left: 20px;
@@ -226,13 +205,18 @@ a.button:hover {
         width: 445px;
         margin-top: 40px;
     }
-
-    .image {
+    .picture {
         width: 300px;
         max-width: 80%;
         height: 150px;
         max-height: 80%;
         margin-top: 50px;
         border: 3px solid rgba(255, 255, 255, 0.584);
+    }
+    .question{
+        font-size: 25px;
+        width: 400px;
+        margin-bottom: 10px;
+        color:rgb(50, 19, 3)
     }
 }

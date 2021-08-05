@@ -1,8 +1,5 @@
 "use strict"
 
-//const $ = selector => document.querySelector(selector); 
-
-const questionPicture = document.getElementById("questionPicture");
 
 function buildTrivia() {
     const output = [];
@@ -13,8 +10,10 @@ function buildTrivia() {
     myQuestions.forEach(
         (currentQuestion, questionNumber) => {
             const answers = [];
+            const image = document.createElement('img');
+            image.src = currentQuestion.pictures;
             let letter;
-            questionPicture.src = currentQuestion.pictures;
+            
 
             for (letter in currentQuestion.answers) {
                 answers.push(
@@ -30,6 +29,7 @@ function buildTrivia() {
                 `<div class="slide">
                     <div class="question">${currentQuestion.question}</div>
                     <div class="answers">${answers.join('')}</div>
+                    <img class="picture" src=${currentQuestion.pictures}>
                 </div>`
             );
         }
@@ -87,7 +87,6 @@ function showPreviousSlide() {
     showSlide(currentSlide - 1);
     }
 
-const pictureContainer = document.getElementById("picture");
 const triviaContainer = document.getElementById("trivia");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
